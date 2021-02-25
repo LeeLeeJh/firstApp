@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.firstapp">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Wish"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".IntroductionActivity"></activity>
+        <activity android:name=".translationActivity" />
+        <activity android:name=".FollowerActivity" />
+        <activity android:name=".FollowingActivity" />
+        <activity android:name=".MyStoryActivity" />
+        <activity android:name=".UserProfileActivity" />
+        <!--
+<activity android:name=".UserProfileActivity"
+            android:theme="@style/popupTheme" android:screenOrientation="portrait"></activity>
+        -->
+        <activity android:name=".MessageActivity" />
+        <activity android:name=".ChatRoomActivity" />
+        <activity android:name=".InnerStoryActivity" />
+        <activity android:name=".UpdateWriteActivity" />
+        <activity android:name=".notificationActivity" />
+        <activity android:name=".WriteActivity" />
+        <activity
+            android:name=".Story_Activity"
+            android:label="@string/title_activity_story_" />
+        <activity android:name=".BaseActivity" />
+        <activity android:name=".WritingActivity" />
+        <activity android:name=".Register6Activity" />
+        <activity android:name=".OurStoryActivity" />
+        <activity android:name=".MyprofileActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SplashActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.AppCompat" />
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".Register2Activity" />
+        <activity android:name=".Register3Activity" />
+        <activity android:name=".Register4Activity" />
+        <activity android:name=".Register5Activity" /> <!-- 사진 촬영을 위한 provide -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.example.firstapp.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider> <!-- 포어그라운드 알림 // 작동 안됨... -->
+        <!--
+  &lt;!&ndash; - 안드로이드 8.0 이상 푸시 처리 추가 코드 &ndash;&gt;
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_launcher_foreground"/>
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent"/>
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+           />/ android:value="@string/de" />
+        -->
+        <service
+            android:name=".MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

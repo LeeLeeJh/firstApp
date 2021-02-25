@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item
+    android:id="@+id/action_earthstory"
+    android:enabled="true"
+    android:icon="@drawable/ic_language_black_24dp"
+    android:title="스토리"/>
+
+    <item
+        android:id="@+id/action_chatbubble"
+        android:enabled="true"
+        android:icon="@drawable/ic_chat_bubble_outline_black_24dp"
+        android:title="채팅"/>
+
+    <item
+        android:id="@+id/action_notify"
+        android:enabled="true"
+        android:icon="@drawable/ic_favorite_border_black_24dp"
+        android:title="알림"/>
+
+    <item
+        android:id="@+id/action_myprofile"
+        android:enabled="true"
+        android:icon="@drawable/ic_perm_identity_black_24dp"
+        android:title="마이페이지"/>
+
+
+</menu>
